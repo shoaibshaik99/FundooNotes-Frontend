@@ -1,0 +1,113 @@
+$background-color: #f0f4f9;
+$text-color: rgb(73, 73, 73);
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $background-color;
+  width: 100%;
+  height: 100vh;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.login {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.card {
+  width: 100%;
+  border-radius: 28px;
+  display: flex;
+  flex-direction: column;
+}
+
+.google-image {
+  width: 48px;
+  height: 48px;
+  padding: 2rem 0 1.5rem 0.5rem;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem 2rem 2rem;
+}
+
+.left {
+  padding-bottom: 2rem;
+
+  h1 {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.right {
+  .field {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .forgot-password {
+    margin-top: -1rem;
+  }
+
+  .guest-mode {
+    margin-top: 2rem;
+    font-size: 0.875rem;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  .action-buttons {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      min-width: 120px;
+    }
+  }
+}
+
+.footer {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: $background-color;
+
+  .language-select {
+    select {
+      height: 30px;
+      background-color: $background-color;
+      border: none;
+      color: $text-color;
+    }
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 1rem;
+
+    button {
+      border-radius: 8px;
+      color: $text-color;
+      font-family: "Google Sans", roboto, "Noto Sans Myanmar UI", arial, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 400;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+    }
+  }
+}
+
+

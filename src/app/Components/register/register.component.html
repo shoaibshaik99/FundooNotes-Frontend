@@ -1,0 +1,76 @@
+<div class="registration-page">
+    <mat-card class="registration-card">
+        <mat-card-header>
+            <div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png" alt="" class="google-image">
+            </div>
+        </mat-card-header>
+        <div class="registration-card-content">
+            <div class="left-responsive">
+                <h1>Create your Account</h1>
+                <h3>to continue to Fundoo Notes!</h3>
+                <form [formGroup]="RegisterForm" (ngSubmit)="onRegister()">
+                  <div class="display-fields">
+                    <mat-form-field appearance="outline" style="padding-right: 30px">
+                        <mat-label>First name*</mat-label>
+                        <input matInput placeholder="" formControlName="firstName">
+                      </mat-form-field>
+                      <mat-form-field appearance="outline">
+                        <mat-label>Last name (optional)</mat-label>
+                        <input matInput placeholder="" formControlName="lastName">
+                      </mat-form-field>
+                  </div>
+                  <div>
+                    <mat-form-field appearance="outline" class="username">
+                        <mat-label>Username*</mat-label>
+                        <input matInput placeholder="" formControlName="email">
+                        <span matSuffix style="padding-right: 10px; color: rgb(73,73,73);">&#64;gmail.com</span>
+                        <mat-hint>only letters, numbers & periods are allowed</mat-hint>
+                      </mat-form-field>
+                  </div>
+                  <div class="display-fields" style="margin-top: 10px;">
+                    <mat-form-field appearance="outline" style="padding-right: 30px">
+                        <mat-label>Password*</mat-label>
+                        <input matInput placeholder="" [type]="hide?'password':'text'" formControlName="password">
+                      </mat-form-field>
+                      <mat-form-field appearance="outline">
+                        <mat-label>Confirm*</mat-label>
+                        <input matInput placeholder="" [type]="hide?'password':'text'">
+                      </mat-form-field>
+                  </div>
+                  <p>Use 8 or more charecters with a mix of letters, numbers & symbols</p>
+                  <mat-checkbox class="example-margin" (change)="hide=!hide">Show password</mat-checkbox>
+                  <div>
+                    <button mat-button color="primary" style="margin-right: 250px;">Sign in instead</button>
+                    <button mat-flat-button color="primary">Next</button>
+                  </div>
+              </form>
+            </div>
+            <div class="right-part" >
+                <img class="right-image" src="https://simg.nicepng.com/png/small/175-1754459_google-account-products-icons-crear-una-cuenta-de.png" alt="" width="50%">
+                <div style="display:flex; flex-direction: column; font-size: 16px; color: rgb(73,73,73);">
+                    <p style="margin-right:30px; ">One account. All of Google</p>
+                    <p style="margin-left:30px">working for you</p>
+                </div>
+            </div>
+            
+        </div>
+      </mat-card>
+      <div class="footer">
+        <div class="ft-d1">
+          <select class="ft-d1-select">
+            <option value="">English (United States)</option>
+            <option value="">Kannada</option>
+            <option value="">Telugu</option>
+            <option value="">Hindi</option>
+            <option value="">Marathi</option>
+            <option value="">Tamil</option>
+          </select>
+        </div>
+        <div class="ft-d2">
+          <button mat-button href="https://support.google.com/accounts?hl=en&p=account_iph" target="_blank">Help</button>
+          <button mat-button href="https://accounts.google.com/TOS?loc=IN&hl=en&privacy=true" target="_blank">Privacy</button>
+          <button mat-button href="https://accounts.google.com/TOS?loc=IN&hl=en" target="_blank">Terms</button>
+        </div>
+      </div>
+</div>

@@ -1,0 +1,26 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <button mat-icon-button (click)="sidenav.toggle();">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <img src="https://www.gstatic.com/images/branding/product/1x/keep_2020q4_48dp.png" alt="google-keep-icon">
+        <h1>Keep</h1>
+    </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container>
+    <mat-sidenav #sidenav opened="true" mode="side">
+        <mat-nav-list>
+            <a mat-list-item>Home</a>
+            <a mat-list-item>Account</a>
+            <a mat-list-item>About Us</a>
+            <a mat-list-item>Contact Us</a>
+            <a mat-list-item>Help</a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div style="height: 88vh">
+            <router-outlet>
+            </router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,15 @@
+<div *ngFor="let note of NotesList" class="card">
+    <mat-card class="Note">
+        <mat-card-header>
+          <mat-card-title>{{note.title}}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <div>{{note.description}}</div>
+            <div>{{note.notesId}}</div>
+        </mat-card-content>
+        <div>
+          <app-app-icons [notesObject]="note"></app-app-icons>
+          <!-- <app-app-icons [notesObject]="notes" (refreshEvent)="receivedRefershEvent($event)"></app-app-icons> -->
+        </div>
+      </mat-card>
+</div>  
