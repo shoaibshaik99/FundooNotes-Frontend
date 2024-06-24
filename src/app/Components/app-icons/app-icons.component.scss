@@ -1,6 +1,23 @@
 .bottom-elements{
-    width:70%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+}
+
+.icons{
+    width: 10px;
+}
+
+.background-colors{
+    display: inline;
+    flex-direction: row;
+}
+
+.color-icon{
+    display: inline;
+    align-items:center;
+    justify-content: center;
+    border-radius: 50%;
+    border:solid 1px black ;
+    width: 10%;
 }

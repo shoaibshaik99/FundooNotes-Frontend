@@ -1,4 +1,2 @@
-<app-add-note></app-add-note>
-<app-display-all-notes [NotesList]="NotesArray"></app-display-all-notes>
-
-<!-- <app-display-all-notes [NotesList]="NotesArray" (updateAutoRefresh)="receivedRefreshEventFromDisplaytoGetall($event)"></app-display-all-notes> -->
+<app-add-note (refreshAddEvent)="AddEvent($event)"></app-add-note>
+<app-display-all-notes [NotesList]="NotesArray" (updateAutoRefresh)="receivedRefreshEventFromDisplaytoGetall($event)"></app-display-all-notes>

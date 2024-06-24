@@ -22,6 +22,7 @@ export class HttpService {
   }
 
   putMethod(url: string, reqData: any, token:boolean=true, httpOptions: any={}){
+    console.log( reqData)
     return this.http.put(url, reqData, token && httpOptions)
   }
 }

@@ -18,7 +18,20 @@ export class AddAndDisplayNotesComponent implements OnInit{
       console.log(response);
       this.NotesArray=response.data;
       console.log(this.NotesArray);
+      this.NotesArray=this.NotesArray.filter((object:any)=>{
+        return object.isArchived==false && object.isTrash==false;
+      })
+      this.NotesArray.reverse();
     })
   }
+
+  AddEvent($event: any){
+    console.log('note refreshed after creating notes');
+    this.OnAddNote();
+  }
   
+  receivedRefreshEventFromDisplaytoGetall($event:any){
+    console.log('note refreshed after update');
+    this.OnAddNote();
+  }
 }

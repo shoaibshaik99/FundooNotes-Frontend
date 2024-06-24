@@ -31,19 +31,6 @@ export class NotesService {
     return this.httpService.getMethod('https://localhost:5001/api/Notes/GetAUserNotes', true, header);
   }
 
-  trashNotes(reqdata:any){
-    console.log(reqdata)
-    let header ={
-    headers: new HttpHeaders({
-    'Content-type': 'application/json',
-    'Authorization': 'Bearer '+this.token
-    })
-    }
-    return this.httpService.putMethod('https://localhost:5001/api/Notes/TrashToggle?noteId='+reqdata.noteId, {}, true, header);
-    }
-
-
-
   archiveNotes(reqdata:any){
     console.log(reqdata)
     let header ={
@@ -54,4 +41,38 @@ export class NotesService {
     }
     return this.httpService.putMethod('https://localhost:5001/api/Notes/ArchiveToggle?noteId='+reqdata.noteId, {}, true, header);
     }
+
+    trashNotes(reqdata:any){
+      console.log(reqdata)
+      let header ={
+      headers: new HttpHeaders({
+      'Content-type': 'application/json',
+      'Authorization': 'Bearer '+this.token
+      })
+      }
+      return this.httpService.putMethod('https://localhost:5001/api/Notes/TrashToggle?noteId='+reqdata.noteId, {}, true, header);
+    }
+
+    updateNotes(reqData:any,id:any){
+      // console.log(reqData)
+      let header={
+        headers:new HttpHeaders({
+         'Content-type':'application/json' ,
+         'Authorization':'Bearer '+this.token
+        })
+      }
+      return this.httpService.putMethod('https://localhost:5001/api/Notes/EditNote/'+id,reqData, true, header);
+    }
+    
+    notesColor(reqData:any){
+      console.log(reqData);
+      let header={
+        headers:new HttpHeaders({
+         'Content-type':'application/json' ,
+         'Authorization':'Bearer '+this.token
+        })
+      }
+      return this.httpService.putMethod('https://localhost:5001/api/Notes/SetBackGround?noteId='+reqData.notesId,reqData,true, header);
+    }
+
 }

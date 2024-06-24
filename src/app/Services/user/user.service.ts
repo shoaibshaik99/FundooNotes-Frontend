@@ -23,5 +23,4 @@ export class UserService {
     return this.httpService.postMethod('https://localhost:5001/api/Users/Login',data,false,header);
   }
 
-
 }
